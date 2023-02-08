@@ -12,18 +12,65 @@ h3 {
   font-family: 'RocknRoll One', sans-serif;
 }
 
+p {
+  font-family: 'Sawarabi Gothic', sans-serif;
+}
+
+/* ストライプ下線 ここから */
+/* PC用 */
+h3 {
+  font-size: 33px;
+  padding-bottom: 0.3em;
+}
 
 h3::after {
   content: "";
   display: block;
-  width: 300px;
-  height: 10px;
-  background-image: linear-gradient(to right, transparent, #ffee02);
-  background-repeat: repeat-x;
-  background-size: 10px 10px;
+  width: 350px;
+  height: 8px;
+  background: repeating-linear-gradient(135deg, #fff, #fff 3.2px, #FFEE02 3.2px, #FFEE02 6.4px);
   margin: 0 auto;
 }
 
-p {
-  font-family: 'Sawarabi Gothic', sans-serif;
+/* PCギャラリー用 */
+h3.under-s::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 8px;
+  background: repeating-linear-gradient(135deg, #fff, #fff 3.2px, #FFEE02 3.2px, #FFEE02 6.4px);
+  margin: 0 auto;
 }
+
+/* PC用ここまで */
+
+/* SP用 */
+@media screen and (max-width: 599px) {
+  h3 {
+    font-size: 18px;
+    padding-bottom: 0.4em;
+  }
+
+  h3::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 7.5px;
+    background: repeating-linear-gradient(135deg, #fff, #fff 3.2px, #FFEE02 3.2px, #FFEE02 6.4px);
+    margin: 0 auto;
+  }
+
+  /* SPギャラリー用 */
+  h3.under-s::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 7.5px;
+    background: repeating-linear-gradient(135deg, #fff, #fff 3.2px, #FFEE02 3.2px, #FFEE02 6.4px);
+    margin: 0 auto;
+  }
+
+}
+
+/* SP用ここまで */
+/* ストライプ下線 ここまで */
