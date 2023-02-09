@@ -63,6 +63,14 @@ header li a:visited{
   color: inherit;
 }
 
+header nav {
+  display: none;
+}
+
+#menu {
+  color: pointer;
+}
+
 /* PC用ここまで */
 
 /* SP用 */
