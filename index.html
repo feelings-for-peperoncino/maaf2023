@@ -103,21 +103,39 @@
   </div>
 
   <script>
+    // document.getElementById("menu").addEventListener("click", function () {
+    //   var nav = document.querySelector("nav");
+    //   if (nav.style.display === "block") {
+    //     nav.style.display = "none";
+    //   } else {
+    //     nav.style.display = "block";
+    //   }
+    // });
+    //#menuをクリックしたらnavのopaciyを1にして、heightを100%にする
     document.getElementById("menu").addEventListener("click", function () {
       var nav = document.querySelector("nav");
-      if (nav.style.display === "block") {
-        nav.style.display = "none";
+      if (nav.style.opacity === "1") {
+        nav.style.opacity = "0";
+        nav.style.height = "";
       } else {
-        nav.style.display = "block";
+        nav.style.opacity = "1";
+        nav.style.height = "100%";
       }
     });
-    // #menuがblockになっている時、li aをクリックしたらnavをnoneにする
+    // #menuがopacity 1になっている時、li aをクリックしたらnavのopacityを0にして、heightを0にする
     document.querySelector("nav").addEventListener("click", function () {
       var nav = document.querySelector("nav");
-      if (nav.style.display === "block") {
-        nav.style.display = "none";
+      if (nav.style.opacity === "1") {
+        nav.style.opacity = "0";
+        nav.style.height = "";
       }
     });
+    // document.querySelector("nav").addEventListener("click", function () {
+    //   var nav = document.querySelector("nav");
+    //   if (nav.style.display === "block") {
+    //     nav.style.display = "none";
+    //   }
+    // });
   </script>
 
 

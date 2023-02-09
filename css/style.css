@@ -64,8 +64,14 @@ li a:visited{
   color: inherit;
 }
 
-nav {
+/* nav {
   display: none;
+} */
+
+nav {
+  height: 0;
+  opacity: 0;
+  transition: all .5s ease;
 }
 
 #menu {
