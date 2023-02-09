@@ -111,6 +111,13 @@
         nav.style.display = "block";
       }
     });
+    // #menuがblockになっている時、li aをクリックしたらnavをnoneにする
+    document.querySelector("nav").addEventListener("click", function () {
+      var nav = document.querySelector("nav");
+      if (nav.style.display === "block") {
+        nav.style.display = "none";
+      }
+    });
   </script>
 
 
