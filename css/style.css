@@ -42,6 +42,27 @@ h3.under-s::after {
   margin: 0 auto;
 }
 
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+header li a{
+  color: inherit;
+  text-decoration: none;
+}
+
+header li a:hover{
+  color: inherit;
+  cursor: pointer;
+}
+
+header li a:visited{
+  color: inherit;
+}
+
 /* PC用ここまで */
 
 /* SP用 */
