@@ -71,6 +71,16 @@ nav {
   color: pointer;
 }
 
+.gallery {
+  text-align: center;
+}
+
+.gallery img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
 /* PC用ここまで */
 
 /* SP用 */
