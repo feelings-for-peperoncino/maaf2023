@@ -89,6 +89,10 @@ nav {
     opacity: 1;
     transition: none;
   }
+
+  #menuBg {
+    background-color: #fff;
+  }
 }
 
 #menu {
@@ -136,6 +140,8 @@ footer a {
     background: repeating-linear-gradient(135deg, #fff, #fff 3.2px, #FFEE02 3.2px, #FFEE02 6.4px);
     margin: 0 auto;
   }
+
+
 
 }
 
