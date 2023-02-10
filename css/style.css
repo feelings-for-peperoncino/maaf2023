@@ -1,5 +1,5 @@
 header #logo {
-  max-width: 240px;
+  width: 131px;
 }
 
 main {
@@ -82,8 +82,15 @@ nav {
   transition: all .5s ease;
 }
 
+
+
 /* 768px以上の時はheight 100% opacity 1 transitionを使わない */
 @media screen and (min-width: 768px) {
+
+  header #logo {
+    width: 240px;
+  }
+
   nav {
     height: 100%;
     opacity: 1;
