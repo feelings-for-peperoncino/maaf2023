@@ -114,7 +114,7 @@ footer a {
 /* SP用 */
 @media screen and (max-width: 599px) {
   h3 {
-    font-size: 18px;
+    /* font-size: 18px; */
     padding-bottom: 0.4em;
   }
 
