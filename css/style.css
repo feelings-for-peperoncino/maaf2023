@@ -1,3 +1,7 @@
+header #logo {
+  max-width: 240px;
+}
+
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -99,6 +103,10 @@ nav {
   width: 300px;
   height: 300px;
   object-fit: cover;
+}
+
+footer a {
+  text-decoration: none;
 }
 
 /* PC用ここまで */
