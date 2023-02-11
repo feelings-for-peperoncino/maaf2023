@@ -2,7 +2,7 @@ header #logo {
   width: 131px;
 }
 
-main {
+main, #menuBg {
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -132,7 +132,7 @@ footer a {
   h3::after {
     content: "";
     display: block;
-    width: 300px;
+    width: 250px;
     height: 7.5px;
     background: repeating-linear-gradient(135deg, #fff, #fff 3.2px, #FFEE02 3.2px, #FFEE02 6.4px);
     margin: 0 auto;
@@ -142,7 +142,7 @@ footer a {
   h3.under-s::after {
     content: "";
     display: block;
-    width: 300px;
+    width: 250px;
     height: 7.5px;
     background: repeating-linear-gradient(135deg, #fff, #fff 3.2px, #FFEE02 3.2px, #FFEE02 6.4px);
     margin: 0 auto;
