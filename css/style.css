@@ -2,6 +2,10 @@ header #logo {
   width: 131px;
 }
 
+main a {
+  text-decoration: none;
+}
+
 main, #menuBg {
   max-width: 1000px;
   margin: 0 auto;
