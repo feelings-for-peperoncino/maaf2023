@@ -210,6 +210,45 @@
 
 
 
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1403.7400454545454!2d139.703475!3d35.658581!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdaef7f9c0c50bcc3!2z5p2x5Lqs44K_44Ov44O8!5e0!3m2!1sja!2sjp!4v1614503905289!5m2!1sja!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<button id="getLocation">Get My Location</button>
+<div id="map" style="width:100%;height:500px;"></div>
+
+<script>
+  var map;
+  var marker;
+  var getLocationButton = document.getElementById("getLocation");
+  getLocationButton.addEventListener("click", function() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+        };
+        if (!map) {
+          map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 8,
+            center: pos
+          });
+        } else {
+          map.panTo(pos);
+        }
+        if (!marker) {
+          marker = new google.maps.Marker({
+            position: pos,
+            map: map
+          });
+        } else {
+          marker.setPosition(pos);
+        }
+      });
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  });
+</script>
+
+
 
 
 
