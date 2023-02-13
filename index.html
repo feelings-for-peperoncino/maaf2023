@@ -50,6 +50,36 @@
     </div>
   </header>
 
+  <!-- <div id="menuBg" class="container py-4 sticky-top">
+    <div class="text-end d-md-none">
+      <i id="menu" class="bi bi-list bg-white fs-1"></i>
+    </div>
+    <nav class="d-md-block">
+      <ul class="d-flex flex-column flex-md-row justify-content-between flex-nowrap align-items-center fs-5">
+        <li class="mb-3 mb-md-0">
+          <a href="#">
+            トップ
+          </a>
+        </li>
+        <li class="mb-3 mb-md-0">
+          <a href="#tour">
+            さんぽコースの説明
+          </a>
+        </li>
+        <li class="mb-3 mb-md-0">
+          <a href="#gallery">
+            ギャラリー
+          </a>
+        </li>
+        <li class="mb-3 mb-md-0">
+          <a href="#blog">
+            裏さんぽブログ
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div> -->
+
   <div id="menuBg" class="container py-4 sticky-top">
     <div class="text-end d-md-none">
       <i id="menu" class="bi bi-list bg-white fs-1"></i>
@@ -81,34 +111,54 @@
   </div>
 
   <script>
+    // id="menu"をクリックしたら、navにactiveクラスを付与する
     document.getElementById("menu").addEventListener("click", function () {
       var nav = document.querySelector("nav");
-      if (nav.style.opacity === "1") {
-        nav.style.opacity = "0";
-        nav.style.height = "";
-        // menuBGにclass bg-whiteを削除
+      if (nav.classList.contains("active")) {
+        nav.classList.remove("active");
         var menuBg = document.getElementById("menuBg");
         menuBg.classList.remove("bg-white");
       } else {
-        nav.style.opacity = "1";
-        nav.style.height = "100%";
-        // menuBGにclass bg-whiteを追加
+        nav.classList.add("active");
         var menuBg = document.getElementById("menuBg");
         menuBg.classList.add("bg-white");
       }
+      // navにactiveクラスがある時に、li aをクリックしたら、navからactiveクラスを削除する
+      document.querySelectorAll("nav li a").forEach(function (a) {
+        a.addEventListener("click", function () {
+          if (nav.classList.contains("active")) {
+            nav.classList.remove("active");
+            var menuBg = document.getElementById("menuBg");
+            menuBg.classList.remove("bg-white");
+          }
+        });
+      });
     });
-    // #menuがopacity 1になっている時、li aをクリックしたらnavのopacityを0にして、heightを0にする
-    document.querySelector("nav").addEventListener("click", function () {
-      var nav = document.querySelector("nav");
-      if (nav.style.opacity === "1") {
-        nav.style.opacity = "0";
-        nav.style.height = "";
-        nav.style.transition = "none";
-        // menuBGにclass bg-whiteを削除
-        var menuBg = document.getElementById("menuBg");
-        menuBg.classList.remove("bg-white");
-      }
-    });
+
+    // document.getElementById("menu").addEventListener("click", function () {
+    //   var nav = document.querySelector("nav");
+    //   if (nav.style.opacity === "1") {
+    //     nav.style.opacity = "0";
+    //     nav.style.height = "";
+    //     var menuBg = document.getElementById("menuBg");
+    //     menuBg.classList.remove("bg-white");
+    //   } else {
+    //     nav.style.opacity = "1";
+    //     nav.style.height = "100%";
+    //     var menuBg = document.getElementById("menuBg");
+    //     menuBg.classList.add("bg-white");
+    //   }
+    // });
+    // document.querySelector("nav").addEventListener("click", function () {
+    //   var nav = document.querySelector("nav");
+    //   if (nav.style.opacity === "1") {
+    //     nav.style.opacity = "0";
+    //     nav.style.height = "";
+    //     nav.style.transition = "none";
+    //     var menuBg = document.getElementById("menuBg");
+    //     menuBg.classList.remove("bg-white");
+    //   }
+    // });
   </script>
 
 

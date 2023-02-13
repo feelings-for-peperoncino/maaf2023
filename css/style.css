@@ -80,10 +80,19 @@ li a:visited{
   display: none;
 } */
 
+/* グローバルナビ */
+
 nav {
   height: 0;
   opacity: 0;
+  pointer-events: none;
   transition: all .5s ease;
+}
+
+nav.active {
+  height: 100%;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 
