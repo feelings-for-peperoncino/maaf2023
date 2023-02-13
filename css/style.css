@@ -110,6 +110,7 @@ nav.active {
     height: 100%;
     opacity: 1;
     transition: none;
+    pointer-events: auto;
   }
 
   #menuBg {
