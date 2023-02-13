@@ -86,13 +86,15 @@ nav {
   height: 0;
   opacity: 0;
   pointer-events: none;
-  transition: all .5s ease;
+  transition: none;
 }
 
 nav.active {
   height: 100%;
   opacity: 1;
   pointer-events: auto;
+  transition: all .5s ease;
+  
 }
 
 
